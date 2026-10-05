@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Northstar Invest — Investment Platform</title>
+<style>
+:root{--bg:#f5f8f7;--dark:#10201b;--green:#1f7a55;--mint:#dff2e8;--gold:#c59a45;--white:#fff;--muted:#68756f}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--dark)}
+nav{height:72px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 7%;border-bottom:1px solid #e6ebe8;position:sticky;top:0;z-index:5}
+.logo{font-size:21px;font-weight:800;letter-spacing:.5px}.logo span{color:var(--green)}
+nav a{margin-left:24px;color:#34413c;text-decoration:none;font-size:14px}.navbtn{background:var(--dark);color:#fff!important;padding:11px 17px;border-radius:22px}
+.hero{padding:82px 7% 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center;background:linear-gradient(135deg,#fff,#eaf5ef)}
+.badge{display:inline-block;background:var(--mint);color:var(--green);padding:8px 13px;border-radius:20px;font-size:12px;font-weight:700}
+h1{font-size:clamp(44px,6vw,72px);line-height:1;letter-spacing:-3px;margin:20px 0}
+.hero p{font-size:18px;line-height:1.7;color:var(--muted);max-width:580px}
+.btn{display:inline-block;padding:14px 21px;border-radius:26px;text-decoration:none;font-weight:700;margin:12px 10px 0 0;background:var(--green);color:#fff}.btn.alt{background:#fff;color:var(--dark);border:1px solid #ccd7d1}
+.dashboard{background:var(--dark);border-radius:22px;padding:25px;color:#fff;box-shadow:0 25px 60px #10201b30}.balance{font-size:37px;margin:10px 0}.gain{color:#8de0b6;font-weight:700}.chart{height:135px;margin-top:25px;position:relative;border-bottom:1px solid #52635c;background:linear-gradient(180deg,#1f7a5520,transparent)}
+svg{width:100%;height:100%}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.stat{background:#fff;padding:20px;border-radius:12px}.stat b{font-size:26px}.stat small{color:var(--muted)}
+section{padding:72px 7%}.title{text-align:center;font-size:38px;margin:0 0 10px}.sub{text-align:center;color:var(--muted);margin:0 auto 40px;max-width:680px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.plan{background:#fff;padding:28px;border-radius:17px;border:1px solid #e3e9e5}.plan.featured{border:2px solid var(--green);transform:translateY(-7px)}.plan h3{font-size:22px}.price{font-size:30px;font-weight:800;margin:20px 0}.plan li{margin:13px 0;color:#58665f}.plan button{width:100%;padding:13px;border:0;border-radius:23px;background:var(--dark);color:#fff;font-weight:700;cursor:pointer}
+.info{background:var(--dark);color:#fff}.info .sub{color:#cbd4d0}.risk{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.risk div{background:#1b3028;padding:25px;border-radius:15px}.risk h3{margin-top:0;color:#9ce1bc}
+.contact{text-align:center;background:#fff}.contact input{padding:14px;width:min(420px,90%);border:1px solid #ccd7d1;border-radius:25px}.contact button{padding:14px 22px;border:0;border-radius:25px;background:var(--green);color:#fff;font-weight:700;cursor:pointer}
+footer{text-align:center;padding:30px;color:#738079;font-size:13px}
+@media(max-width:760px){nav div:last-child{display:none}.hero{grid-template-columns:1fr;padding-top:55px}.plans,.risk{grid-template-columns:1fr}.plan.featured{transform:none}.stats{grid-template-columns:1fr 1fr 1fr}}
+
+.message-fab{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#1f7a55;color:#fff;display:flex;align-items:center;justify-content:center;font-size:25px;cursor:pointer;box-shadow:0 8px 25px #10201b45;z-index:20}
+.message-box{display:none;position:fixed;right:22px;bottom:92px;width:330px;background:#fff;border-radius:16px;padding:20px;box-shadow:0 15px 45px #0002;z-index:19;border:1px solid #e1e8e4}
+.message-head{display:flex;justify-content:space-between;align-items:center}.message-head button{border:0;background:none;font-size:25px;cursor:pointer}
+.message-box p{color:#68756f;font-size:14px}.message-box input,.message-box textarea{width:100%;padding:12px;margin:6px 0;border:1px solid #ccd7d1;border-radius:9px;font:inherit}.message-box textarea{height:90px;resize:none}.message-box>button{width:100%;padding:12px;border:0;border-radius:22px;background:#1f7a55;color:#fff;font-weight:700;cursor:pointer;margin-top:7px}
+</style>
+</head>
+<body>
+<nav><div class="logo">NORTHSTAR <span>SHARES</span></div><div><a href="#plans">Plans</a><a href="#about">About</a><a href="#contact">Contact</a><a class="navbtn" href="#contact">Get Started</a></div></nav>
+
+<section class="hero">
+<div>
+<span class="badge">SMARTER LONG-TERM INVESTING</span>
+<h1>Build wealth with a clearer plan.</h1>
+<p>A modern investment platform for people who want to understand their options, manage their portfolio and invest with a long-term mindset.</p>
+<a class="btn" href="#plans">Explore Investments</a><a class="btn alt" href="#about">Learn More</a>
+</div>
+<div class="dashboard">
+<small>PORTFOLIO OVERVIEW</small><div class="balance">$24,680.00</div><div class="gain">+$1,842.40 · +8.06%</div>
+<div class="chart"><svg viewBox="0 0 500 140" preserveAspectRatio="none"><polyline points="0,120 55,105 105,110 155,78 210,88 260,55 315,66 365,35 420,48 500,10" fill="none" stroke="#8de0b6" stroke-width="4"/></svg></div>
+<div class="stats"><div><small>Stocks</small><br><b>52%</b></div><div><small>Bonds</small><br><b>28%</b></div><div><small>Cash</small><br><b>20%</b></div></div>
+</div>
+</section>
+
+<section id="plans"><h2 class="title">Investment Options</h2><p class="sub">Choose an approach based on your goals and risk tolerance. Returns are not guaranteed and investments can lose value.</p>
+<div class="plans">
+<div class="plan"><h3>Starter</h3><p>For learning and getting started.</p><div class="price">$100+</div><ul><li>Beginner-friendly portfolio</li><li>Diversified assets</li><li>Basic portfolio tracking</li></ul><button onclick="selectPlan('Starter')">Choose Starter</button></div>
+<div class="plan featured"><h3>Balanced</h3><p>For long-term diversified growth.</p><div class="price">$1,000+</div><ul><li>Multi-asset allocation</li><li>Portfolio insights</li><li>Risk-based diversification</li></ul><button onclick="selectPlan('Balanced')">Choose Balanced</button></div>
+<div class="plan"><h3>Custom</h3><p>For investors with specific goals.</p><div class="price">Custom</div><ul><li>Personalized strategy</li><li>Goal-based planning</li><li>Dedicated guidance</li></ul><button onclick="selectPlan('Custom')">Request Details</button></div>
+</div></section>
+
+<section id="about" class="info"><h2 class="title">Investing With Transparency</h2><p class="sub">We believe investors should understand where their money goes, what risks they take and how their strategy fits their goals.</p>
+<div class="risk"><div><h3>Clear information</h3><p>See fees, objectives and key risks before making an investment decision.</p></div><div><h3>Diversification</h3><p>Spread exposure across assets instead of relying on one investment.</p></div><div><h3>Long-term focus</h3><p>Build a strategy around goals rather than promises of quick or guaranteed profits.</p></div></div></section>
+
+<section id="contact" class="contact"><h2 class="title">Start Your Investment Journey</h2><p class="sub">Request information about available investment options.</p><input id="email" type="email" placeholder="Your email address"><br><button onclick="join()">Request Information</button></section>
+
+<div class="message-fab" onclick="toggleMessage()" aria-label="Message us">💬</div>
+<div class="message-box" id="messageBox">
+  <div class="message-head"><b>Message Northstar Shares</b><button onclick="toggleMessage()">×</button></div>
+  <p>Have a question? Send us a message.</p>
+  <input id="customerName" placeholder="Your name">
+  <textarea id="customerMsg" placeholder="Write your message..."></textarea>
+  <button onclick="sendMessage()">Send Message</button>
+</div>
+<footer>© 2026 Northstar Shares · Investment values can rise or fall. Past performance does not guarantee future results.</footer>
+<script>
+function selectPlan(p){alert("You selected the "+p+" plan. Connect this button to your secure onboarding system.");}
+function join(){let e=document.getElementById('email').value;if(!e){alert('Please enter your email address.');return}alert('Thanks! Your information request has been recorded for this preview.');}
+
+function toggleMessage(){
+  const box=document.getElementById('messageBox');
+  box.style.display=box.style.display==='block'?'none':'block';
+}
+function sendMessage(){
+  const name=document.getElementById('customerName').value.trim();
+  const msg=document.getElementById('customerMsg').value.trim();
+  if(!name||!msg){alert('Please enter your name and message.');return}
+  const subject=encodeURIComponent('Customer message - Northstar Shares');
+  const body=encodeURIComponent('Customer name: '+name+'\n\nMessage:\n'+msg);
+  window.location.href='mailto:northstarshares@gmail.com?subject='+subject+'&body='+body;
+}
+</script>
+</body></html>
